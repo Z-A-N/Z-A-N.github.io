@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMPS Informatika - UIN Saizu</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+          <div class="logo">
+            <a href="#">
+              <img src="assets/logo.png" alt="Logo HMPS INF">
+              <h1>HIMATIF<span>SAIZU</span></h1>
+            </a>
+          </div>
+      
+          <ul class="nav-links">
+            <li><a href="index" class="active">Beranda</a></li>
+            <li><a href="artikel">Artikel</a></li>
+            <li><a href="proker">Program Kerja</a></li>
+            <li><a href="divisi">Departemen</a></li>
+            <li><a href="tentangkami">Tentang Kami</a></li>
+          </ul>
+      
+          <a href="#" class="action_btn">Gabung</a>
+      
+          <!-- Tombol Bars -->
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      
+        <!-- Dropdown Menu Mobile -->
+        <div class="dropdown_menu">
+          <li><a href="index"class="active">Beranda</a></li>
+          <li><a href="artikel">Artikel</a></li>
+          <li><a href="proker">Program Kerja</a></li>
+          <li><a href="divisi">Departemen</a></li>
+          <li><a href="tentangkami">Tentang Kami</a></li>
+          <li><a href="#" class="action_btn">Gabung</a></li>
+        </div>
+      </header>
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const dropdownMenu = document.querySelector('.dropdown_menu');
+        
+        toggleBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+        
+        // Tutup dropdown saat resize ke desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
