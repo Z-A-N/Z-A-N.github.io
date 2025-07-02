@@ -1,64 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMPS Informatika - UIN Saizu</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HIMATIFSAIZU - HMPS Informatika UIN Saizu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="navbar">
-          <div class="logo">
-            <a href="#">
-              <img src="assets/logo.png" alt="Logo HMPS INF">
-              <h1>HIMATIF<span>SAIZU</span></h1>
-            </a>
-          </div>
-      
-          <ul class="nav-links">
-            <li><a href="index" class="active">Beranda</a></li>
-            <li><a href="artikel">Artikel</a></li>
-            <li><a href="proker">Program Kerja</a></li>
-            <li><a href="divisi">Departemen</a></li>
-            <li><a href="tentangkami">Tentang Kami</a></li>
-          </ul>
-      
-          <a href="#" class="action_btn">Gabung</a>
-      
-          <!-- Tombol Bars -->
-          <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-      
-        <!-- Dropdown Menu Mobile -->
-        <div class="dropdown_menu">
-          <li><a href="index"class="active">Beranda</a></li>
-          <li><a href="artikel">Artikel</a></li>
-          <li><a href="proker">Program Kerja</a></li>
-          <li><a href="divisi">Departemen</a></li>
-          <li><a href="tentangkami">Tentang Kami</a></li>
-          <li><a href="#" class="action_btn">Gabung</a></li>
-        </div>
-      </header>
-      <script>
-        const toggleBtn = document.querySelector('.toggle_btn');
-        const dropdownMenu = document.querySelector('.dropdown_menu');
-        
-        toggleBtn.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('show');
-        });
-        
-        // Tutup dropdown saat resize ke desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                dropdownMenu.classList.remove('show');
-            }
-        });
-    </script>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo HIMATIFSAIZU" />
+          <h1>HIMATIF<span>SAIZU</span></h1>
+        </a>
+      </div>
+
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="callsponsor.html">Call Sponsor</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggle Theme Switch -->
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <label for="themeToggle" class="slider-icon">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+
+      <!-- Tombol Gabung -->
+      <a href="daftar.html" class="action_btn">Gabung</a>
+
+      <!-- Tombol Bars -->
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+<!-- Dropdown Menu Mobile -->
+<div class="dropdown_menu">
+  <ul>
+    <li><a href="index.html" class="active"><i class="fas fa-house"></i> Beranda</a></li>
+    <li><a href="tentangkami.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
+    <li><a href="kegiatan.html"><i class="fas fa-calendar-alt"></i> Kegiatan</a></li>
+    <li><a href="callsponsor.html"><i class="fas fa-handshake"></i> Call Sponsor</a></li>
+    <li><a href="galeri.html"><i class="fas fa-image"></i> Galeri</a></li>
+    <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+    <li><a href="daftar.html" class="action_btn"><i class="fas fa-user-plus"></i> Gabung</a></li>
+  </ul>
+</div>
+  </header>
+
+    <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Selamat Datang di <span>HIMATIFSAIZU</span></h2>
+      <p>Himpunan Mahasiswa Informatika UIN Saizu yang aktif, kreatif, dan inovatif dalam membangun generasi teknologi Islami.</p>
+      <a href="tentangkami.html" class="action_btn">Kenali Kami</a>
+    </div>
+  </section>
+
+  <!-- Tentang HIMATIFSAIZU -->
+  <section class="tentang-kami">
+    <div class="container">
+      <h3>Tentang HIMATIFSAIZU</h3>
+      <p>HIMATIFSAIZU merupakan wadah bagi mahasiswa Prodi Informatika untuk mengembangkan potensi diri dalam bidang teknologi, kepemimpinan, dan sosial kemasyarakatan. Kami percaya bahwa kolaborasi adalah kunci menuju masa depan yang lebih baik.</p>
+    </div>
+  </section>
+
+  <!-- Kegiatan Unggulan -->
+  <section class="kegiatan-unggulan">
+    <h3>Kegiatan Unggulan</h3>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h4>Workshop Web Development</h4>
+        <p>Pembelajaran HTML, CSS, dan JavaScript dari dasar hingga menengah.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-robot"></i>
+        <h4>Tech Competition</h4>
+        <p>Lomba programming, IoT, dan teknologi lainnya tingkat kampus & nasional.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-handshake-angle"></i>
+        <h4>Pengabdian Masyarakat</h4>
+        <p>Berbagi pengetahuan IT ke masyarakat sebagai bentuk kontribusi nyata.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="testimoni">
+    <blockquote>"Bergabung dengan HIMATIFSAIZU membuka banyak peluang belajar dan tumbuh. Saya jadi lebih percaya diri, punya relasi, dan pengalaman organisasi."</blockquote>
+    <cite>— Mahasiswa Informatika Angkatan 2023</cite>
+  </section>
+
+  <!-- CTA Join -->
+  <section class="cta-join">
+    <h3>Ayo Bergabung dengan HIMATIFSAIZU!</h3>
+    <p>Raih pengalaman berharga dan jadilah bagian dari perubahan.</p>
+    <a href="daftar.html" class="action_btn">Daftar Sekarang</a>
+  </section>
+
+<script>
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const dropdownMenu = document.querySelector('.dropdown_menu');
+  const toggleThemeSwitch = document.getElementById('themeToggle');
+  const themeLabel = document.querySelector('label[for="themeToggle"]');
+
+  // Toggle dropdown
+  toggleBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Tutup dropdown jika ukuran layar > 768px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+
+  // Load tema dari localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleThemeSwitch.checked = true;
+    themeLabel.setAttribute('aria-checked', 'true');
+  }
+
+  // Toggle dark mode + simpan preferensi
+  toggleThemeSwitch.addEventListener('change', () => {
+    const isDark = toggleThemeSwitch.checked;
+    document.body.classList.toggle('dark-mode', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    themeLabel.setAttribute('aria-checked', isDark.toString());
+  });
+</script>
 </body>
 </html>
