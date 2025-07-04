@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HIMATIFSAIZU - HMPS Informatika UIN Saizu</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -62,14 +63,46 @@
 </div>
   </header>
 
-    <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Selamat Datang di <span>HIMATIFSAIZU</span></h2>
-      <p>Himpunan Mahasiswa Informatika UIN Saizu yang aktif, kreatif, dan inovatif dalam membangun generasi teknologi Islami.</p>
-      <a href="tentangkami.html" class="action_btn">Kenali Kami</a>
+<!-- Hero Carousel -->
+<section class="hero-carousel swiper">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <picture>
+        <!-- WebP tetap prioritas -->
+        <source srcset="assets/carou1.webp" type="image/webp" />
+        <img
+          src="assets/carou1.webp"
+          alt="Banner HIMATIFSAIZU"
+          loading="lazy"
+        />
+      </picture>
+
+      <!-- Lapisan gelap -->
+      <div class="slide-overlay"></div>
+
+      <!-- Teks di atas gambar -->
+      <div class="carousel-content">
+        <h2>Selamat Datang di <span>HIMATIFSAIZU</span></h2>
+        <p>
+          Himpunan Mahasiswa program studi Informatika UIN Saizu yang
+          <strong>unggul, progresif, dan kolaboratif</strong> dalam
+          membangun generasi teknologi Islami.
+        </p>
+        <a href="tentangkami.html" class="action_btn">Kenali Kami</a>
+      </div>
     </div>
-  </section>
+
+    <!-- ★ Duplikasikan blok .swiper-slide di atas
+         jika kelak ingin menambah gambar lain ★ -->
+
+  </div>
+
+  <!-- Titik navigasi (bullets) -->
+  <div class="swiper-pagination"></div>
+</section>
+
 
   <!-- Tentang HIMATIFSAIZU -->
   <section class="tentang-kami">
