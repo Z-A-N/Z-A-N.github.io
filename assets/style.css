@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* Reset Dasar */
 * {
   margin: 0;
   padding: 0;
@@ -11,24 +11,66 @@ body {
   color: #1E2A39;
   transition: background 0.3s, color 0.3s;
 }
+
+/* ================== */
+/* === Dark Mode ==== */
+/* ================== */
+
 body.dark-mode {
   background-color: #1E2A39;
   color: #ffffff;
 }
+body.dark-mode header {
+  background-color: #1E2A39;
+  border-bottom-color: #334155;
+}
+body.dark-mode .logo h1 {
+  color: #ffffff;
+}
+body.dark-mode .logo h1 span {
+  color: #94a3b8;
+  -webkit-text-stroke: 1px #ffffff;
+}
+body.dark-mode .nav-links li a,
+body.dark-mode .dropdown_menu li a {
+  color: #ffffff;
+}
+body.dark-mode .nav-links li a::after,
+body.dark-mode .dropdown_menu li a::after {
+  background: #ffffff;
+}
+body.dark-mode .action_btn {
+  background-color: #ffffff;
+  color: #1E2A39;
+}
+body.dark-mode .action_btn:hover {
+  background-color: #e2e8f0;
+}
+body.dark-mode .toggle_btn {
+  color: #ffffff;
+}
+body.dark-mode .dropdown_menu {
+  background: #1E2A39;
+}
+body.dark-mode .dropdown_menu li a {
+  color: #e2e8f0;
+}
+body.dark-mode .dropdown_menu li a:hover {
+  background-color: #1E2A39;
+}
 
-/* Header */
+/* ================== */
+/* ===== Header ===== */
+/* ================== */
+
 header {
   width: 100%;
   position: relative;
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
-}
-body.dark-mode header {
-  background-color: #1E2A39;
-  border-bottom: 1px solid #334155;
+  z-index: 1000;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -36,8 +78,6 @@ body.dark-mode header {
   flex-wrap: wrap;
   padding: 10px 30px;
   position: relative;
-  z-index: 1000;
-  background-color: inherit;
 }
 
 /* Logo */
@@ -61,13 +101,6 @@ body.dark-mode header {
   color: #64748b;
   -webkit-text-stroke: 1px #1E2A39;
   font-weight: normal;
-}
-body.dark-mode .logo h1 {
-  color: #ffffff;
-}
-body.dark-mode .logo h1 span {
-  color: #94a3b8;
-  -webkit-text-stroke: 1px #ffffff;
 }
 
 /* Nav Links */
@@ -104,37 +137,8 @@ body.dark-mode .logo h1 span {
 .nav-links li a.active::after {
   width: 100%;
 }
-body.dark-mode .nav-links li a {
-  color: #ffffff;
-}
-body.dark-mode .nav-links li a::after {
-  background: #ffffff;
-}
 
-/* Button Gabung */
-.action_btn {
-  background-color: #1E2A39;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  margin-left: 10px;
-}
-.action_btn:hover {
-  background-color: #334155;
-  transform: scale(1.05);
-}
-body.dark-mode .action_btn {
-  background-color: #ffffff;
-  color: #1E2A39;
-}
-body.dark-mode .action_btn:hover {
-  background-color: #e2e8f0;
-}
-
-/* Theme Switch */
+/* Theme Switch & Toggle Button */
 .theme-switch {
   display: flex;
   align-items: center;
@@ -181,21 +185,16 @@ body.dark-mode .action_btn:hover {
   opacity: 0.2;
 }
 
-/* Toggle Button */
 .toggle_btn {
   display: none;
   font-size: 28px;
   color: #1E2A39;
   cursor: pointer;
-  z-index: 10001;
-}
-body.dark-mode .toggle_btn {
-  color: #ffffff;
 }
 
 /* Dropdown Menu */
 .dropdown_menu {
-  display: flex;
+  display: none; /* Changed from flex to none, controlled by .show */
   flex-direction: column;
   position: absolute;
   right: 10px;
@@ -210,12 +209,16 @@ body.dark-mode .toggle_btn {
   transition: all 0.3s ease;
   z-index: 9999;
 }
+.dropdown_menu.show {
+  display: flex !important;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 .dropdown_menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 .dropdown_menu li {
   border-bottom: 1px solid #eee;
@@ -254,128 +257,59 @@ body.dark-mode .toggle_btn {
 .dropdown_menu li a.active::after {
   width: 60%;
 }
-body.dark-mode .dropdown_menu {
-  background: #1E2A39;
-  color: #ffffff;
-}
-body.dark-mode .dropdown_menu li a {
-  color: #e2e8f0;
-}
-body.dark-mode .dropdown_menu li a::after {
-  background: #ffffff;
-}
-body.dark-mode .dropdown_menu li a:hover {
-  background-color: #1E2A39;
-}
-.dropdown_menu .action_btn {
+
+/* Action Button (Shared) */
+.action_btn {
   background-color: #1E2A39;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.action_btn:hover {
+  background-color: #334155;
+  transform: scale(1.05);
+}
+.navbar .action_btn {
+  margin-left: 10px;
+}
+.dropdown_menu .action_btn {
+  padding: 10px 20px;
   margin: 20px;
   text-align: center;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.dropdown_menu .action_btn:hover {
-  background-color: #334155;
-}
-body.dark-mode .dropdown_menu .action_btn {
-  background-color: #ffffff;
-  color: #1E2A39;
-}
-body.dark-mode .dropdown_menu .action_btn:hover {
-  background-color: #e2e8f0;
-}
-.dropdown_menu.show {
-  display: flex !important;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .nav-links {
-    gap: 18px;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links,
-  .action_btn {
-    display: none;
-  }
-  .toggle_btn {
-    display: block;
-  }
-  .dropdown_menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 10px;
-    background: #fff;
-    z-index: 999;
-  }
-  body.dark-mode .dropdown_menu {
-    background-color: #1E2A39;
-  }
-  .theme-switch {
-    margin-left: auto;
-  }
-}
-@media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-  .logo h1 {
-    font-size: 16px;
-  }
-  .action_btn {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-  .slider-icon {
-    width: 44px;
-    height: 24px;
-  }
-  .slider-icon i {
-    font-size: 12px;
-  }
-}
+/* ======================== */
+/* === Content Sections === */
+/* ======================== */
 
-/* ==== Hero Carousel ==== */
+/* Hero Carousel */
 .hero-carousel {
   width: 100%;
-  height: 70vh;           /* tinggi fleksibel; ganti 100vh jika mau full‑screen */
+  height: 70vh;
   position: relative;
 }
-
 .hero-carousel .swiper-slide {
   width: 100%;
   height: 100%;
   position: relative;
 }
-
 .hero-carousel img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* gambar selalu “ngepas” di semua perangkat */
+  object-fit: cover;
 }
-
-/* Overlay agar gambar tampak lebih gelap */
 .slide-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
-
-/* Sedikit lebih gelap di dark‑mode agar kontras teks tetap oke */
 body.dark-mode .slide-overlay {
   background: rgba(0, 0, 0, 0.6);
 }
-
-/* Kontainer teks */
 .carousel-content {
   position: absolute;
   top: 50%;
@@ -387,7 +321,6 @@ body.dark-mode .slide-overlay {
   padding: 0 1rem;
   max-width: 900px;
 }
-
 .carousel-content h2 {
   font-size: clamp(1.8rem, 5vw, 3rem);
   margin-bottom: 1rem;
@@ -399,10 +332,9 @@ body.dark-mode .slide-overlay {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin-bottom: 1.5rem;
 }
+.hero { display: none; } /* Hide old hero if exists */
 
-/* Sembunyikan style .hero lama jika masih ada */
-.hero { display: none; }
-
+/* Tentang Kami (Single Section) */
 .tentang-kami {
   padding: 60px 30px;
   text-align: center;
@@ -420,6 +352,7 @@ body.dark-mode .slide-overlay {
   line-height: 1.7;
 }
 
+/* Tentang Kami (Duo Section with Video) */
 .tentang-kami-duo {
   padding: 80px 30px;
   background-color: #f8fafc;
@@ -427,7 +360,6 @@ body.dark-mode .slide-overlay {
 body.dark-mode .tentang-kami-duo {
   background-color: #1e293b;
 }
-
 .tentang-kami-duo .container {
   display: flex;
   flex-wrap: wrap;
@@ -436,26 +368,16 @@ body.dark-mode .tentang-kami-duo {
   max-width: 1200px;
   margin: auto;
 }
-
+.video-wrapper, .text-wrapper {
+  flex: 1 1 400px; /* Base size */
+}
 .video-wrapper {
-  flex: 1 1 500px;
-}
-.video-wrapper video {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.text-wrapper {
-  flex: 1 1 400px;
+  flex-basis: 500px; /* Slightly larger base for video */
 }
 .text-wrapper h3 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #1e293b;
-}
-body.dark-mode .text-wrapper h3 {
-  color: #ffffff;
 }
 .text-wrapper p {
   font-size: 16px;
@@ -463,37 +385,10 @@ body.dark-mode .text-wrapper h3 {
   margin-bottom: 20px;
   color: #475569;
 }
-body.dark-mode .text-wrapper p {
-  color: #e2e8f0;
-}
+body.dark-mode .text-wrapper h3 { color: #ffffff; }
+body.dark-mode .text-wrapper p { color: #e2e8f0; }
 
-@media (max-width: 768px) {
-  .tentang-kami-duo .container {
-    flex-direction: column;
-    align-items: center; /* Optional: untuk center-align di tampilan kecil */
-    text-align: center;
-  }
-
-  .video-wrapper, .text-wrapper {
-    flex: 1 1 100%;
-  }
-
-  .video-wrapper video {
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  max-height: 480px; /* untuk layar besar */
-}
-
-
-  .text-wrapper h3 {
-    font-size: 22px;
-  }
-
-  .text-wrapper p {
-    font-size: 14px;
-  }
-}
-
+/* Custom Video Player */
 .custom-video {
   position: relative;
   display: flex;
@@ -503,14 +398,13 @@ body.dark-mode .text-wrapper p {
   background: #000;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
-
 .custom-video video {
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
-
 .custom-play-button {
   position: absolute;
   width: 70px;
@@ -528,26 +422,15 @@ body.dark-mode .text-wrapper p {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   animation: pulse 1.5s infinite;
 }
-
 .custom-play-button:hover {
   transform: scale(1.1);
 }
-
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
 }
 
+/* Kegiatan Unggulan */
 .kegiatan-unggulan {
   padding: 80px 30px;
   text-align: center;
@@ -556,24 +439,19 @@ body.dark-mode .text-wrapper p {
 body.dark-mode .kegiatan-unggulan {
   background: linear-gradient(135deg, #1e293b, #0f172a);
 }
-
 .kegiatan-unggulan h3 {
   font-size: 32px;
   margin-bottom: 50px;
   font-weight: 700;
   color: #1e293b;
 }
-body.dark-mode .kegiatan-unggulan h3 {
-  color: #ffffff;
-}
-
+body.dark-mode .kegiatan-unggulan h3 { color: #ffffff; }
 .kegiatan-unggulan .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-
 .kegiatan-unggulan .card {
   background: #ffffff;
   padding: 30px 20px;
@@ -590,7 +468,6 @@ body.dark-mode .kegiatan-unggulan .card {
   background: #334155;
   color: #ffffff;
 }
-
 .icon-box {
   background: #1e293b;
   color: #ffffff;
@@ -607,7 +484,6 @@ body.dark-mode .icon-box {
   background: #94a3b8;
   color: #1e293b;
 }
-
 .kegiatan-unggulan .card h4 {
   margin-bottom: 10px;
   font-size: 18px;
@@ -618,32 +494,24 @@ body.dark-mode .icon-box {
   line-height: 1.6;
   color: #475569;
 }
-body.dark-mode .kegiatan-unggulan .card p {
-  color: #e2e8f0;
-}
+body.dark-mode .kegiatan-unggulan .card p { color: #e2e8f0; }
 
-/* ============================= */
-/* === Responsif Berita Card === */
-/* ============================= */
-
+/* Berita Terbaru */
 .berita-terbaru {
   padding: 60px 30px;
   background-color: #ffffff;
   text-align: center;
 }
-
 .berita-terbaru h3 {
   font-size: 28px;
   margin-bottom: 40px;
 }
-
 .berita-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-
 .berita-card {
   width: 320px;
   background-color: #f8fafc;
@@ -653,111 +521,50 @@ body.dark-mode .kegiatan-unggulan .card p {
   text-align: left;
   transition: transform 0.3s ease;
 }
-
 .berita-card:hover {
   transform: translateY(-6px);
 }
-
 .berita-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
 .berita-info {
   padding: 20px;
 }
-
 .berita-info small {
   display: block;
   font-size: 12px;
   color: #64748b;
   margin-bottom: 10px;
 }
-
 .berita-info h4 {
   font-size: 18px;
   margin-bottom: 12px;
   color: #1e293b;
 }
-
 .berita-info p {
   font-size: 14px;
   color: #475569;
   margin-bottom: 15px;
 }
-
 .berita-info a {
   font-size: 14px;
   font-weight: 500;
   color: #0f172a;
   text-decoration: none;
 }
-
 .berita-info a:hover {
   text-decoration: underline;
 }
-
-/* ==== Dark Mode ==== */
-body.dark-mode .berita-terbaru {
-  background-color: #1e293b;
-}
-body.dark-mode .berita-card {
-  background-color: #334155;
-}
+body.dark-mode .berita-terbaru { background-color: #1e293b; }
+body.dark-mode .berita-card { background-color: #334155; }
 body.dark-mode .berita-info h4,
 body.dark-mode .berita-info p,
-body.dark-mode .berita-info a {
-  color: #ffffff;
-}
-body.dark-mode .berita-info small {
-  color: #cbd5e1;
-}
+body.dark-mode .berita-info a { color: #ffffff; }
+body.dark-mode .berita-info small { color: #cbd5e1; }
 
-/* ==== Responsive === */
-@media (max-width: 1024px) {
-  .berita-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .berita-card {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .berita-info h4 {
-    font-size: 16px;
-  }
-
-  .berita-info p {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 480px) {
-  .berita-info {
-    padding: 16px;
-  }
-
-  .berita-info h4 {
-    font-size: 15px;
-  }
-
-  .berita-info p {
-    font-size: 12.5px;
-  }
-
-  .berita-info small {
-    font-size: 11px;
-  }
-
-  .berita-info a {
-    font-size: 13px;
-  }
-}
-
+/* Testimoni */
 .testimoni {
   background: #e2e8f0;
   padding: 50px 30px;
@@ -779,6 +586,7 @@ body.dark-mode .testimoni {
   color: #ffffff;
 }
 
+/* CTA Join */
 .cta-join {
   padding: 60px 30px;
   text-align: center;
@@ -796,3 +604,89 @@ body.dark-mode .cta-join {
   margin-bottom: 20px;
 }
 
+/* ================== */
+/* === Responsive === */
+/* ================== */
+
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 18px;
+  }
+  .berita-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .navbar .action_btn { /* Target only navbar button */
+    display: none;
+  }
+  .toggle_btn {
+    display: block;
+  }
+  .theme-switch {
+    margin-left: 0; /* Let it sit next to the toggle button */
+  }
+  .tentang-kami-duo .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video-wrapper, .text-wrapper {
+    flex: 1 1 100%;
+  }
+  .video-wrapper video {
+    max-height: 480px;
+  }
+  .text-wrapper h3 {
+    font-size: 22px;
+  }
+  .text-wrapper p {
+    font-size: 14px;
+  }
+  .berita-card {
+    width: 100%;
+    max-width: 500px;
+  }
+  .berita-info h4 {
+    font-size: 16px;
+  }
+  .berita-info p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  .logo h1 {
+    font-size: 16px;
+  }
+  .action_btn { /* General rule for smaller buttons */
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .slider-icon {
+    width: 44px;
+    height: 24px;
+  }
+  .slider-icon i {
+    font-size: 12px;
+  }
+  .berita-info {
+    padding: 16px;
+  }
+  .berita-info h4 {
+    font-size: 15px;
+  }
+  .berita-info p {
+    font-size: 12.5px;
+  }
+  .berita-info small {
+    font-size: 11px;
+  }
+  .berita-info a {
+    font-size: 13px;
+  }
+}
