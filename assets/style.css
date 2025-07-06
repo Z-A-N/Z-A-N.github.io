@@ -467,6 +467,86 @@ body.dark-mode .text-wrapper p {
   color: #e2e8f0;
 }
 
+@media (max-width: 768px) {
+  .tentang-kami-duo .container {
+    flex-direction: column;
+    align-items: center; /* Optional: untuk center-align di tampilan kecil */
+    text-align: center;
+  }
+
+  .video-wrapper, .text-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .video-wrapper video {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-height: 480px; /* untuk layar besar */
+}
+
+
+  .text-wrapper h3 {
+    font-size: 22px;
+  }
+
+  .text-wrapper p {
+    font-size: 14px;
+  }
+}
+
+.custom-video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.custom-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.custom-play-button {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1E2A39;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  font-size: 26px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  animation: pulse 1.5s infinite;
+}
+
+.custom-play-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .kegiatan-unggulan {
   padding: 80px 30px;
