@@ -25,8 +25,8 @@
           <li><a href="index.html" class="active">Beranda</a></li>
           <li><a href="berita.html">Berita</a></li>
           <li><a href="tentangkami.html">Tentang Kami</a></li>
-          <li><a href="kegiatan.html">Kegiatan</a></li>
-          <li><a href="callsponsor.html">Call Sponsor</a></li>
+          <li><a href="Event.html">Event</a></li>
+          <li><a href="Partner.html">Partner</a></li>
           <li><a href="galeri.html">Galeri</a></li>
           <li><a href="kontak.html">Kontak</a></li>
         </ul>
@@ -57,7 +57,7 @@
     <li><a href="Berita.html"><i class="fas fa-users"></i> Berita</a></li>
     <li><a href="tentangkami.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
     <li><a href="kegiatan.html"><i class="fas fa-calendar-alt"></i> Kegiatan</a></li>
-    <li><a href="callsponsor.html"><i class="fas fa-handshake"></i> Call Sponsor</a></li>
+    <li><a href="Partner.html"><i class="fas fa-handshake"></i> Call Sponsor</a></li>
     <li><a href="galeri.html"><i class="fas fa-image"></i> Galeri</a></li>
     <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
     <li><a href="daftar.html" class="action_btn"><i class="fas fa-user-plus"></i> Gabung</a></li>
@@ -105,13 +105,23 @@
   <div class="swiper-pagination"></div>
 </section>
 
-  <!-- Tentang HIMATIFSAIZU -->
-  <section class="tentang-kami">
-    <div class="container">
-      <h3>Tentang HIMATIFSAIZU</h3>
-      <p>HIMATIFSAIZU merupakan wadah bagi mahasiswa Prodi Informatika untuk mengembangkan potensi diri dalam bidang teknologi, kepemimpinan, dan sosial kemasyarakatan. Kami percaya bahwa kolaborasi adalah kunci menuju masa depan yang lebih baik.</p>
+<!-- Tentang HIMATIFSAIZU dengan Video -->
+<section class="tentang-kami-duo">
+  <div class="container">
+    <div class="video-wrapper">
+      <video src="assets/video_profile.mp4" autoplay muted loop playsinline></video>
     </div>
-  </section>
+    <div class="text-wrapper">
+      <h3>Tentang HIMATIFSAIZU</h3>
+      <p>
+        HIMATIFSAIZU merupakan wadah bagi mahasiswa Prodi Informatika untuk mengembangkan potensi diri dalam bidang teknologi, kepemimpinan, dan sosial kemasyarakatan.
+        Kami percaya bahwa <strong>kolaborasi</strong> adalah kunci menuju masa depan yang lebih baik.
+      </p>
+      <a href="tentangkami.html" class="action_btn">Selengkapnya</a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Kegiatan Unggulan -->
   <section class="kegiatan-unggulan">
@@ -144,10 +154,10 @@
     <div class="berita-card">
       <img src="assets/berita1.jpg" alt="Dinda Runner Up Puteri Jateng" />
       <div class="berita-info">
-        <small>30 Mei 2025 · Akademik</small>
-        <h4>Dinda Rosalinda Mahasiswi Fakultas Dakwah UIN Saizu Raih Runner Up 2 Puteri Jawa Tengah 2025</h4>
-        <p>Dinda Rosalinda, mahasiswa Prodi Arsitektur, berhasil meraih gelar Runner Up 2 dalam ajang pemilihan Puteri Jawa Tengah 2025.</p>
-        <a href="https://dakwah.uinsaizu.ac.id/dinda-rosalinda-runner-up-puteri-jateng-2025" target="_blank">Baca Selengkapnya →</a>
+        <small>25 Juni 2025 · Akademik</small>
+        <h4>Langkah Konkret Informatika UIN SAIZU Purwokerto Menuju Hackathon Banyumas 2025: Sinergi Mahasiswa, Komunitas, dan Harapan Besar</h4>
+        <p>HMPS Informatika UIN Saizu melakukan koordinasi langsung dengan Hugo Studio dan relasi komunitas digital untuk merancang langkah strategis menjelang ajang inovasi teknologi yang dinantikan tersebut.</p>
+        <a href="berita.html">Baca Selengkapnya →</a>
       </div>
     </div>
 
@@ -189,6 +199,7 @@
     <p>Raih pengalaman berharga dan jadilah bagian dari perubahan.</p>
     <a href="daftar.html" class="action_btn">Daftar Sekarang</a>
   </section>
+  
 
 <script>
   const toggleBtn = document.querySelector('.toggle_btn');

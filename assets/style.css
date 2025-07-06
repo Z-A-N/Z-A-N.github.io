@@ -420,41 +420,126 @@ body.dark-mode .slide-overlay {
   line-height: 1.7;
 }
 
-.kegiatan-unggulan {
-  padding: 60px 30px;
-  text-align: center;
+.tentang-kami-duo {
+  padding: 80px 30px;
+  background-color: #f8fafc;
 }
-.kegiatan-unggulan h3 {
+body.dark-mode .tentang-kami-duo {
+  background-color: #1e293b;
+}
+
+.tentang-kami-duo .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.video-wrapper {
+  flex: 1 1 500px;
+}
+.video-wrapper video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.text-wrapper {
+  flex: 1 1 400px;
+}
+.text-wrapper h3 {
   font-size: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: #1e293b;
 }
+body.dark-mode .text-wrapper h3 {
+  color: #ffffff;
+}
+.text-wrapper p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #475569;
+}
+body.dark-mode .text-wrapper p {
+  color: #e2e8f0;
+}
+
+
+.kegiatan-unggulan {
+  padding: 80px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+body.dark-mode .kegiatan-unggulan {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.kegiatan-unggulan h3 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #1e293b;
+}
+body.dark-mode .kegiatan-unggulan h3 {
+  color: #ffffff;
+}
+
 .kegiatan-unggulan .cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
 }
+
 .kegiatan-unggulan .card {
-  background: #f1f5f9;
-  padding: 20px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 30px 20px;
   width: 280px;
-  transition: transform 0.3s;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .kegiatan-unggulan .card:hover {
-  transform: translateY(-5px);
-}
-.kegiatan-unggulan .card i {
-  font-size: 36px;
-  margin-bottom: 12px;
-  color: #1E2A39;
-}
-.kegiatan-unggulan .card h4 {
-  margin-bottom: 10px;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 body.dark-mode .kegiatan-unggulan .card {
   background: #334155;
   color: #ffffff;
+}
+
+.icon-box {
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dark-mode .icon-box {
+  background: #94a3b8;
+  color: #1e293b;
+}
+
+.kegiatan-unggulan .card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.kegiatan-unggulan .card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+body.dark-mode .kegiatan-unggulan .card p {
+  color: #e2e8f0;
 }
 
 /* ============================= */
@@ -630,3 +715,4 @@ body.dark-mode .cta-join {
 .cta-join p {
   margin-bottom: 20px;
 }
+
