@@ -264,8 +264,8 @@ header {
 /* Action Button (Shared) */
 /* Mengubah tombol utama agar lebih kontras */
 .action_btn {
-  background-color: #ffffff;
-  color: #1E2A39;
+  border: 1px solid white;
+  color: #ffffff;
   padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
