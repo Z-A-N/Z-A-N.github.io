@@ -4,17 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #1E2A39;
   transition: background 0.3s, color 0.3s;
 }
-
-/* ================== */
 /* === Dark Mode ==== */
-/* ================== */
 body.dark-mode {
   background-color: #1E2A39;
   color: #ffffff;
@@ -22,12 +18,12 @@ body.dark-mode {
 body.dark-mode header {
    background: linear-gradient(
   to bottom,
-  rgba(0, 0, 0, 1) 15%,         /* Hitam solid di atas */
-  rgba(10, 10, 10, 1) 25%,      /* Abu-abu sangat gelap, lebih pekat */
-  rgba(20, 20, 20, 1) 55%,      /* Abu-abu lebih gelap dan solid */
-  rgba(25, 25, 25, 1) 60%,      /* Abu-abu lebih solid */
-  rgba(30, 30, 30, 0.98) 65%,   /* Lebih smooth, tidak terlalu tajam */
-  rgba(40, 40, 40, 0.95) 70%,   /* Transisi lebih halus */
+  rgba(0, 0, 0, 1) 15%,        
+  rgba(10, 10, 10, 1) 25%,      
+  rgba(20, 20, 20, 1) 55%,      
+  rgba(25, 25, 25, 1) 60%,      
+  rgba(30, 30, 30, 0.98) 65%,   
+  rgba(40, 40, 40, 0.95) 70%,  
   rgba(50, 50, 50, 0.95) 75%,    
   rgba(100, 100, 100, 0.7) 100% 
 );
@@ -39,13 +35,13 @@ body.dark-mode .logo h1 {
   color: #ffffff;
 }
 body.dark-mode .logo h1 span  {
-  background: linear-gradient(90deg, #00D0FF, #4CB3EA, #00BFFF); /* Gradasi biru yang lebih halus */
+  background: linear-gradient(90deg, #00D0FF, #4CB3EA, #00BFFF); 
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7); /* Bayangan lebih halus dan sedikit lebih besar */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7); 
 }
 body.dark-mode .nav-links li a,
 body.dark-mode .dropdown_menu li a {
@@ -56,27 +52,49 @@ body.dark-mode .dropdown_menu li a::after {
   background: #ffffff;
 }
 body.dark-mode .action_btn {
-  background-color: transparent;  /* Menghilangkan latar belakang */
-  color: #ffffff;                 /* Teks berwarna putih */
+  background-color: transparent;  
+  color: #ffffff;                 
   padding: 8px 16px;
-  border: 2px solid #ffffff;      /* Garis putih di sekitar tombol */
-  border-radius: 6px;             /* Sudut tombol melengkung */
+  border: 2px solid #ffffff;     
+  border-radius: 6px;             
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 body.dark-mode .action_btn:hover {
-  background-color: #ffffff;      /* Latar belakang menjadi putih saat hover */
-  color: #1E2A39;                 /* Warna teks berubah menjadi gelap saat hover */
-  transform: scale(1.05);         /* Memberikan efek zoom in saat hover */
+  background-color: #18587A;       
+  color: #ffffff;                
+  transform: scale(1.05);        
 }
 body.dark-mode .toggle_btn {
   color: #ffffff;
 }
+body.dark-mode .carousel-content .action_btn {
+  background-color: #4CB3EA;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
 
-/* ================== */
+body.dark-mode .carousel-content .action_btn:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+body.dark-mode .social-sidebar a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .footer-bar {
+  background-color: #18587A; /* warna tetap sama untuk dark mode */
+}
+
+
 /* ===== Header ===== */
-/* ================== */
 header {
   position: absolute;
   top: 0;
@@ -85,8 +103,8 @@ header {
   z-index: 100;
   background: linear-gradient(
   to bottom,
-  rgba(0, 0, 0, 1) 15%,         /* Hitam solid di atas */
-  rgba(10, 10, 10, 1) 25%,      /* Abu-abu sangat gelap, lebih pekat */
+  rgba(0, 0, 0, 1) 15%,        
+  rgba(10, 10, 10, 1) 25%,     
   rgba(20, 20, 20, 1) 55%,     
   rgba(25, 25, 25, 1) 60%,      
   rgba(30, 30, 30, 0.98) 65%,   
@@ -118,12 +136,11 @@ header {
   height: 40px;
   object-fit: contain;
 }
-/* Teks logo dan nav links diubah jadi putih agar terlihat di atas gradasi gelap */
 .logo h1 {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;  /* HIMATIF menjadi putih */
-  text-align: left;  /* Agar lebih terstruktur */
+  color: #ffffff;  
+  text-align: left;  
 }
 .logo h1 span {
   background: linear-gradient(90deg, #00D0FF, #4FD9FF, #00BFFF);
@@ -132,8 +149,8 @@ header {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Bayangan lebih lembut untuk kontras lebih halus */
-  font-style: italic; /* Coba untuk memberikan sedikit efek dinamis pada teks */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+  font-style: italic; 
 }
 
 /* Nav Links */
@@ -221,21 +238,19 @@ header {
 .toggle_btn {
   display: none;
   font-size: 28px;
-  color: #ffffff; /* Ubah warna agar terlihat */
+  color: #ffffff; 
   cursor: pointer;
 }
 
 /* Dropdown Menu */
-/* Perubahan 4: Membuat dropdown menu transparan dengan efek blur */
 .dropdown_menu {
   display: none;
   flex-direction: column;
   position: absolute;
   right: 10px;
   top: 70px;
-  /* Menggunakan gradasi yang sama dengan header */
   background: linear-gradient(to bottom, rgba(30, 42, 57, 0.95), rgba(30, 42, 57, 0.8));
-  backdrop-filter: blur(8px); /* Efek kaca untuk modern look */
+  backdrop-filter: blur(8px); 
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -245,7 +260,7 @@ header {
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 9999;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional border */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 .dropdown_menu.show {
   display: flex !important;
@@ -267,7 +282,7 @@ header {
 .dropdown_menu li a {
   display: block;
   padding: 12px 20px;
-  color: #e2e8f0; /* Warna teks terang agar terbaca */
+  color: #e2e8f0; 
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -277,7 +292,7 @@ header {
   margin-right: 10px;
 }
 .dropdown_menu li a:hover {
-  background-color: rgba(255, 255, 255, 0.05); /* Efek hover halus */
+  background-color: rgba(255, 255, 255, 0.05); 
   color: #ffffff;
 }
 .dropdown_menu li a::after {
@@ -296,22 +311,21 @@ header {
   width: 60%;
 }
 
-/* Action Button (Shared) */
-/* Mengubah tombol utama agar lebih kontras */
+/* Action Button (Gabung) */
 .action_btn {
-  background-color: transparent;  /* Menghilangkan latar belakang */
-  color: #ffffff;                 /* Teks berwarna putih */
+  background-color: transparent;  
+  color: #ffffff;                 
   padding: 8px 16px;
-  border: 2px solid #ffffff;      /* Garis putih di sekitar tombol */
-  border-radius: 6px;             /* Sudut tombol melengkung */
+  border: 2px solid #ffffff;      
+  border-radius: 6px;            
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 .action_btn:hover {
-  background-color: #ffffff;      /* Latar belakang menjadi putih saat hover */
-  color: #1E2A39;                 /* Warna teks berubah menjadi gelap saat hover */
-  transform: scale(1.05);         /* Memberikan efek zoom in saat hover */
+  background-color: #18587A;       
+  color: #ffffff;                 
+  transform: scale(1.05);      
 }
 .navbar .action_btn {
   margin-left: 10px;
@@ -321,17 +335,39 @@ header {
   margin: 20px;
   text-align: center;
 }
-
-/* ======================== */
 /* === Content Sections === */
-/* ======================== */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 9999;
+}
+
+.social-sidebar a {
+  color: #ffffff;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  background-color: #4CB3EA;
+  color: #ffffff;
+  transform: scale(1.15);
+}
 
 /* Hero Carousel */
 .hero-carousel {
   width: 100%;
-  height: 70vh; /* Pastikan ada tinggi yang cukup */
+  height: 95vh; 
   position: relative;
-  /* Pindahkan section ini ke atas agar header bisa menimpanya */
 }
 .hero-carousel .swiper-slide {
   width: 100%;
@@ -343,7 +379,6 @@ header {
   height: 100%;
   object-fit: cover;
 }
-/* Pastikan z-index sudah benar */
 .slide-overlay {
   position: absolute;
   inset: 0;
@@ -365,17 +400,58 @@ body.dark-mode .slide-overlay {
   max-width: 900px;
 }
 .carousel-content h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700; /* Bold */
   font-size: clamp(1.8rem, 5vw, 3rem);
-  margin-bottom: 1rem;
+  letter-spacing: 1px; /* Menambahkan jarak antar huruf */
+  margin-bottom: 1rem; /* Memberikan jarak yang lebih besar antara teks dan elemen di bawahnya */
 }
+
 .carousel-content h2 span {
-  color: #64748b;
+  color: #4CB3EA;
 }
 .carousel-content p {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin-bottom: 1.5rem;
 }
-.hero { display: none; } /* Hide old hero if exists */
+.carousel-content .action_btn {
+  background-color: #4CB3EA;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.carousel-content .action_btn:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.footer-bar {
+  background-color: #18587A;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.75rem 0;
+}
+
+.footer-bar .marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 
 /* Tentang Kami (Single Section) */
 .tentang-kami {
@@ -415,12 +491,13 @@ body.dark-mode .tentang-kami-duo {
   flex: 1 1 400px; /* Base size */
 }
 .video-wrapper {
-  flex-basis: 500px; /* Slightly larger base for video */
+  flex-basis: 500px; 
 }
 .text-wrapper h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
   color: #1e293b;
+  font-family: 'Poppins', sans-serif;
 }
 .text-wrapper p {
   font-size: 16px;
@@ -471,6 +548,21 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.15); opacity: 0.8; }
+}
+/* Tombol Selengkapnya Khusus Bagian Tentang */
+.action_btn.selengkapnya {
+  background-color: #1e293b; /* biru tua */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.action_btn.selengkapnya:hover {
+  background-color: #334155;
+  transform: scale(1.05);
 }
 
 /* Kegiatan Unggulan */
@@ -647,9 +739,15 @@ body.dark-mode .cta-join {
   margin-bottom: 20px;
 }
 
-/* ================== */
 /* === Responsive === */
-/* ================== */
+.tentang-kami-duo {
+  padding: 120px 30px 80px; /* sebelumnya 80px */
+}
+@media (max-width: 768px) {
+  .tentang-kami-duo {
+    padding-top: 80px;
+  }
+}
 
 @media (max-width: 1024px) {
   .nav-links {
@@ -662,14 +760,14 @@ body.dark-mode .cta-join {
 
 @media (max-width: 768px) {
   .nav-links,
-  .navbar .action_btn { /* Target only navbar button */
+  .navbar .action_btn { 
     display: none;
   }
   .toggle_btn {
     display: block;
   }
   .theme-switch {
-    margin-left: 0; /* Let it sit next to the toggle button */
+    margin-left: 0; 
   }
   .tentang-kami-duo .container {
     flex-direction: column;
@@ -706,7 +804,7 @@ body.dark-mode .cta-join {
   .logo h1 {
     font-size: 16px;
   }
-  .action_btn { /* General rule for smaller buttons */
+  .action_btn { 
     padding: 6px 12px;
     font-size: 14px;
   }
