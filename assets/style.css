@@ -549,7 +549,7 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
 
 /* Pembungkus Section Kegiatan */
 .highlighted-section {
-  background-color: #0D4C6B;
+  background-color: #18587A;
   border-radius: 2rem;
   padding: 3rem 1rem;
   margin: 2rem auto;
@@ -577,37 +577,45 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
 
 /* Swiper Card Style (Kegiatan) */
 .kegiatanSwiper .swiper-slide {
-  background-color: #1E678A;
-  border-radius: 1rem;
-  padding: 1.5rem;
+  background-color: #40A8C4; 
+  border-radius: 1rem; 
+  padding: 2rem; 
   color: #fff;
-  display: flex;
+  display: flex; 
   flex-direction: column;
-  text-align: left;
-  transition: transform 0.3s;
-  min-height: 220px; /* Menyamakan tinggi card */
+  text-align: left; 
+  transition: transform 0.3s; 
+  min-height: 250px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .kegiatanSwiper .swiper-slide:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px); 
 }
 
+/* Gambar pada card */
 .kegiatanSwiper .card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+  width: 60px; 
+  height: 60px; 
+  margin-bottom: 1.5rem; 
+  border: 2px solid #fff;
 }
 
+/* Judul card */
 .kegiatanSwiper .card h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  margin-bottom: 0.75rem; 
+  line-height: 1.4; 
 }
 
+/* Deskripsi card */
 .kegiatanSwiper .card p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1rem; 
+  line-height: 1.6; 
+  color: rgba(255, 255, 255, 0.85);
 }
+
 
 /* Swiper Navigation */
 .swiper-button-next,
@@ -652,7 +660,7 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
 /* Berita Terbaru */
 .berita-terbaru {
   padding: 60px 30px;
-  background-color: #ffffff;
+  background-color: #18587A;
   text-align: center;
 }
 .berita-terbaru h3 {
