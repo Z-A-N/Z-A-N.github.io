@@ -16,17 +16,17 @@ body.dark-mode {
   color: #ffffff;
 }
 body.dark-mode header {
-   background: linear-gradient(
-  to bottom,
-  rgba(0, 0, 0, 1) 15%,        
-  rgba(10, 10, 10, 1) 25%,      
-  rgba(20, 20, 20, 1) 55%,      
-  rgba(25, 25, 25, 1) 60%,      
-  rgba(30, 30, 30, 0.98) 65%,   
-  rgba(40, 40, 40, 0.95) 70%,  
-  rgba(50, 50, 50, 0.95) 75%,    
-  rgba(100, 100, 100, 0.7) 100% 
-);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 15%,      
+      rgba(10, 10, 10, 1) 25%,     
+      rgba(20, 20, 20, 1) 55%,     
+      rgba(25, 25, 25, 1) 60%,     
+      rgba(30, 30, 30, 0.98) 65%,  
+      rgba(40, 40, 40, 0.95) 70%, 
+      rgba(50, 50, 50, 0.95) 75%,   
+      rgba(100, 100, 100, 0.7) 100% 
+    );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(2px);
   border-bottom: none;
@@ -53,18 +53,18 @@ body.dark-mode .dropdown_menu li a::after {
 }
 body.dark-mode .action_btn {
   background-color: transparent;  
-  color: #ffffff;                 
+  color: #ffffff;          
   padding: 8px 16px;
-  border: 2px solid #ffffff;     
-  border-radius: 6px;             
+  border: 2px solid #ffffff;    
+  border-radius: 6px;          
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 body.dark-mode .action_btn:hover {
-  background-color: #18587A;       
-  color: #ffffff;                
-  transform: scale(1.05);        
+  background-color: #18587A;      
+  color: #ffffff;          
+  transform: scale(1.05);      
 }
 body.dark-mode .toggle_btn {
   color: #ffffff;
@@ -102,16 +102,16 @@ header {
   width: 100%;
   z-index: 100;
   background: linear-gradient(
-  to bottom,
-  rgba(0, 0, 0, 1) 15%,        
-  rgba(10, 10, 10, 1) 25%,     
-  rgba(20, 20, 20, 1) 55%,     
-  rgba(25, 25, 25, 1) 60%,      
-  rgba(30, 30, 30, 0.98) 65%,   
-  rgba(40, 40, 40, 0.95) 70%,   
-  rgba(50, 50, 50, 0.95) 75%,    
-  rgba(100, 100, 100, 0.7) 100% 
-);
+    to bottom,
+    rgba(0, 0, 0, 1) 15%,      
+    rgba(10, 10, 10, 1) 25%,     
+    rgba(20, 20, 20, 1) 55%,     
+    rgba(25, 25, 25, 1) 60%,     
+    rgba(30, 30, 30, 0.98) 65%,  
+    rgba(40, 40, 40, 0.95) 70%, 
+    rgba(50, 50, 50, 0.95) 75%,   
+    rgba(100, 100, 100, 0.7) 100% 
+  );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(2px);
 }
@@ -314,17 +314,17 @@ header {
 /* Action Button (Gabung) */
 .action_btn {
   background-color: transparent;  
-  color: #ffffff;                 
+  color: #ffffff;          
   padding: 8px 16px;
-  border: 2px solid #ffffff;      
-  border-radius: 6px;            
+  border: 2px solid #ffffff;     
+  border-radius: 6px;          
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 .action_btn:hover {
-  background-color: #18587A;       
-  color: #ffffff;                 
+  background-color: #18587A;      
+  color: #ffffff;          
   transform: scale(1.05);      
 }
 .navbar .action_btn {
@@ -382,11 +382,11 @@ header {
 .slide-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 body.dark-mode .slide-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 .carousel-content {
   position: absolute;
@@ -452,25 +452,6 @@ body.dark-mode .slide-overlay {
   100% { transform: translateX(-100%); }
 }
 
-
-/* Tentang Kami (Single Section) */
-.tentang-kami {
-  padding: 60px 30px;
-  text-align: center;
-}
-.tentang-kami .container {
-  max-width: 800px;
-  margin: auto;
-}
-.tentang-kami h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-.tentang-kami p {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
 /* Tentang Kami (Duo Section with Video) */
 .tentang-kami-duo {
   padding: 80px 30px;
@@ -496,14 +477,14 @@ body.dark-mode .tentang-kami-duo {
 .text-wrapper h3 {
   font-size: 30px;
   font-weight: 700;
-  color: #1e293b;
+  color: #265982;
   font-family: 'Poppins', sans-serif;
 }
 .text-wrapper p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 20px;
-  color: #475569;
+  color: #000000;
 }
 body.dark-mode .text-wrapper h3 { color: #ffffff; }
 body.dark-mode .text-wrapper p { color: #e2e8f0; }
@@ -551,7 +532,7 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
 }
 /* Tombol Selengkapnya Khusus Bagian Tentang */
 .action_btn.selengkapnya {
-  background-color: #1e293b; /* biru tua */
+  background-color: #18587A; /* biru tua */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -565,71 +546,108 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
   transform: scale(1.05);
 }
 
-/* Kegiatan Unggulan */
-.kegiatan-unggulan {
-  padding: 80px 30px;
-  text-align: center;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+
+/* Pembungkus Section Kegiatan */
+.highlighted-section {
+  background-color: #0D4C6B;
+  border-radius: 2rem;
+  padding: 3rem 1rem;
+  margin: 2rem auto;
+  color: #fff;
+  max-width: 1200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-body.dark-mode .kegiatan-unggulan {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+
+.highlighted-section .container {
+  max-width: 1200px;
+  margin: auto;
 }
-.kegiatan-unggulan h3 {
-  font-size: 32px;
-  margin-bottom: 50px;
-  font-weight: 700;
-  color: #1e293b;
-}
-body.dark-mode .kegiatan-unggulan h3 { color: #ffffff; }
-.kegiatan-unggulan .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.kegiatan-unggulan .card {
-  background: #ffffff;
-  padding: 30px 20px;
-  width: 280px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.kegiatan-unggulan .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-}
-body.dark-mode .kegiatan-unggulan .card {
-  background: #334155;
-  color: #ffffff;
-}
-.icon-box {
-  background: #1e293b;
-  color: #ffffff;
-  font-size: 32px;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body.dark-mode .icon-box {
-  background: #94a3b8;
-  color: #1e293b;
-}
-.kegiatan-unggulan .card h4 {
-  margin-bottom: 10px;
-  font-size: 18px;
+
+.section-title {
+  font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
 }
-.kegiatan-unggulan .card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #475569;
+
+.section-title em {
+  font-style: italic;
 }
-body.dark-mode .kegiatan-unggulan .card p { color: #e2e8f0; }
+
+/* Swiper Card Style (Kegiatan) */
+.kegiatanSwiper .swiper-slide {
+  background-color: #1E678A;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s;
+  min-height: 220px; /* Menyamakan tinggi card */
+}
+
+.kegiatanSwiper .swiper-slide:hover {
+  transform: translateY(-5px);
+}
+
+.kegiatanSwiper .card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.kegiatanSwiper .card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.kegiatanSwiper .card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;  
+  top: 50%;   
+  transform: translateY(-50%);  
+  background-color: #ffffff;  
+  color: #0D4C6B;  
+  border-radius: 50%;
+  width: 40px;   
+  height: 40px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 20px;   
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem;   
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #0D4C6B;  
+  color: #ffffff;   
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-prev {
+  left: 10px;   
+}
+
+.swiper-button-next {
+  right: 10px;  
+}
 
 /* Berita Terbaru */
 .berita-terbaru {
@@ -741,7 +759,7 @@ body.dark-mode .cta-join {
 
 /* === Responsive === */
 .tentang-kami-duo {
-  padding: 120px 30px 80px; /* sebelumnya 80px */
+  padding: 120px 30px 80px;
 }
 @media (max-width: 768px) {
   .tentang-kami-duo {
