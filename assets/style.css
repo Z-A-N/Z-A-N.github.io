@@ -657,73 +657,96 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
   right: 10px;  
 }
 
-/* Berita Terbaru */
+/* Berita Terbaru Section */
 .berita-terbaru {
   padding: 60px 30px;
   background-color: #18587A;
   text-align: center;
 }
+
 .berita-terbaru h3 {
-  font-size: 28px;
-  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif; 
+  font-style: italic; 
+  font-size: 3.2rem; 
+  font-weight: 700;
+  margin-bottom: 1.5rem; 
+  color: #ffffff;
 }
+
 .berita-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
+
 .berita-card {
   width: 320px;
-  background-color: #f8fafc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  background-color: transparent; /* --- DIUBAH --- */
+  border: 2px solid rgba(255, 255, 255, 0.9); /* --- DIUBAH --- */
+  padding: 15px; /* --- DIUBAH --- Memberi jarak antara border dengan konten di dalamnya */
+  border-radius: 19px;
   text-align: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* --- DIUBAH --- */
 }
+
 .berita-card:hover {
   transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.05); /* --- DIUBAH --- Efek hover subtle */
 }
+
 .berita-card img {
   width: 100%;
-  height: 180px;
+  height: 200px; /* --- DIUBAH --- Sedikit disesuaikan */
   object-fit: cover;
+  /* border-radius di gambar dibuat lebih kecil dari card agar terlihat bagus di dalam */
+  border-radius: 12px; /* --- DIUBAH --- */
 }
+
 .berita-info {
-  padding: 20px;
+  /* Padding samping dihapus karena sudah di-handle oleh padding .berita-card */
+  padding: 20px 0 0 0; /* --- DIUBAH --- */
 }
+
 .berita-info small {
   display: block;
-  font-size: 12px;
-  color: #64748b;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7); /* --- DIUBAH --- Warna teks diubah menjadi putih transparan */
   margin-bottom: 10px;
 }
+
 .berita-info h4 {
   font-size: 18px;
   margin-bottom: 12px;
-  color: #1e293b;
+  color: #ffffff; /* --- DIUBAH --- Warna teks diubah menjadi putih */
+  font-weight: bold;
 }
+
 .berita-info p {
   font-size: 14px;
-  color: #475569;
+  color: rgba(255, 255, 255, 0.85); /* --- DIUBAH --- Warna teks diubah menjadi putih transparan */
   margin-bottom: 15px;
 }
+
 .berita-info a {
   font-size: 14px;
-  font-weight: 500;
-  color: #0f172a;
+   display: block;
+  font-weight: 750;
+  color: #ffffff; 
   text-decoration: none;
+  text-align: right;
 }
+
 .berita-info a:hover {
   text-decoration: underline;
 }
-body.dark-mode .berita-terbaru { background-color: #1e293b; }
-body.dark-mode .berita-card { background-color: #334155; }
-body.dark-mode .berita-info h4,
-body.dark-mode .berita-info p,
-body.dark-mode .berita-info a { color: #ffffff; }
-body.dark-mode .berita-info small { color: #cbd5e1; }
+
+
+body.dark-mode .berita-terbaru {
+  /* Biarkan background section sedikit berbeda di dark mode jika diinginkan */
+  background-color: #1e293b;
+}
+
 
 /* Testimoni */
 .testimoni {
