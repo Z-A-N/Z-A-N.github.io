@@ -1420,3 +1420,290 @@ body.dark-mode .cta-join {
     flex-direction: row;
   }
 }
+
+.cta-download {
+  background-color: #185c7d;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-download::before,
+.cta-download::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-download::before {
+  top: -100px;
+  left: -100px;
+}
+
+.cta-download::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+.cta-download .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-download h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cta-download p {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.cta-download h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #185c7d;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #f0f0f0;
+}
+.form-partner,
+.form-partner input,
+.form-partner textarea,
+.form-partner .form-left,
+.form-partner .form-right,
+.form-partner .action_btn {
+  transition: all 0.3s ease;
+}
+/* === DARK MODE FOR FORM PARTNER === */
+body.dark-mode .form-partner {
+  background-color: #1e293b;
+  color: #e0e0e0;
+}
+
+body.dark-mode .form-partner .form-left h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .form-partner .form-left p,
+body.dark-mode .form-partner .form-left .contact-info p,
+body.dark-mode .form-partner .form-left .contact-info a {
+  color: #cfcfcf;
+}
+
+body.dark-mode .form-right input,
+body.dark-mode .form-right textarea {
+  background-color: #1e293b;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode .form-right input::placeholder,
+body.dark-mode .form-right textarea::placeholder {
+  color: #aaa;
+}
+
+body.dark-mode .form-checkbox label {
+  color: #ccc;
+}
+
+body.dark-mode .form-right .action_btn {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* === FOOTER CTA (Atas) === */
+.footer-cta {
+  background-color: #4a89af;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.footer-cta h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-cta h2 strong {
+  display: block;
+}
+
+.footer-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 32px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #4a89af;
+}
+
+/* === FOOTER UTAMA (Bawah) === */
+.site-footer {
+  background-color: #2b5b82;
+  padding: 60px 40px;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-brand {
+  max-width: 320px;
+}
+
+.footer-brand img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-brand h3 {
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+
+.footer-brand span {
+  color: #7cc0e7;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 12px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #7cc0e7;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start; /* RATA KIRI */
+  min-width: 600px;
+}
+
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.footer-links ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-links ul li i {
+  margin-right: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center; /* center untuk mobile */
+    justify-content: center;
+    min-width: auto;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-brand img {
+    margin: 0 auto 15px;
+  }
+
+  .footer-links ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Global transition */
+body,
+input,
+textarea,
+button,
+.section,
+.navbar,
+footer,
+.form-partner,
+.footer-cta,
+.cta-box {
+  transition: background-color 0.4s ease, color 0.4s ease, border 0.3s ease;
+}

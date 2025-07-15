@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;600;700&family=Syne:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -61,7 +62,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-carousel swiper">
+  <section class="hero-carousel swiper" data-aos="fade-up">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <picture>
@@ -77,7 +78,7 @@
   </section>
 
   <!-- HIGHLIGHT VIDEO -->
-  <section class="tentang-kami-duo">
+  <section class="tentang-kami-duo" data-aos="fade-right">
     <div class="container">
       <div class="video-wrapper custom-video">
         <video id="partnerVideo" src="assets/video_partner.mp4" playsinline controls style="display: none;"></video>
@@ -94,7 +95,7 @@
   </section>
 
  <!-- PAKET SPONSOR INTERAKTIF -->
-<section class="section-sponsorship">
+<section class="section-sponsorship" data-aos="fade-up">
   <h2><span style="color: #fff;">Our <em>Sponsorship</em> Packages</span></h2>
   <div class="sponsor-container">
 
@@ -166,7 +167,7 @@
 </section>
 
 <!-- ALASAN SPONSOR -->
-<section class="kenapa-invest">
+<section class="kenapa-invest" data-aos="fade-up">
   <div class="container">
     <h2 class="kenapa-title">Kenapa harus <br><span>INVEST 2025??</span></h2>
 
@@ -201,7 +202,7 @@
 </section>
 
 <!-- FORM PARTNER -->
-<section class="form-partner">
+<section class="form-partner" data-aos="fade-left">
   <div class="container">
     <div class="form-left">
       <h2><strong>Hubungi Kami</strong><br>Untuk Menjadi Partner</h2>
@@ -237,19 +238,87 @@
   </div>
 </section>
 
+<!-- CTA DOWNLOAD SECTION -->
+<section class="cta-download" data-aos="zoom-in">
+  <div class="container">
+    <h2>Pelajari selengkapnya tentang</h2>
+    <p><em>Informatika Innovation Festival 2025</em></p>
+    <h3>disini</h3>
+    <a href="assets/INVEST2025-PaketSponsorship.pdf" class="download-btn" download>Download</a>
+  </div>
+</section>
 
   <!-- BENEFIT SECTION -->
-  <section class="testimoni">
+  <section class="testimoni" data-aos="fade-up">
     <blockquote>"Menjadi sponsor dalam Invest 2025 adalah bentuk nyata dukungan terhadap generasi muda yang kreatif, Islami, dan melek teknologi."</blockquote>
     <cite>— Ketua Pelaksana Invest 2025</cite>
   </section>
 
   <!-- CTA JOIN -->
-  <section class="cta-join">
-    <h3>Ayo Bergabung Menjadi Partner!</h3>
-    <p>Dapatkan exposure luas dan dukung pengembangan mahasiswa informatika di Indonesia.</p>
-    <a href="kontak.html" class="action_btn">Hubungi Kami</a>
-  </section>
+<section class="footer-cta" data-aos="fade-up">
+  <div class="cta-container">
+    <h2>Ayo bergabung dengan <strong>HIMATIFSAIZU</strong></h2>
+    <p>Raih pengalaman berharga dan jadilah bagian dari perubahan.</p>
+    <a href="daftar.html" class="cta-button">Gabung</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Logo HIMATIFSAIZU">
+      <h3><strong>HIMATIF</strong><span>SAIZU</span></h3>
+      <p>Wadah pengembangan potensi mahasiswa dalam bidang teknologi, kepemimpinan, dan sosial kemasyarakatan.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Kegiatan</a></li>
+          <li><a href="#">Berita</a></li>
+          <li><a href="#">Partner</a></li>
+          <li><a href="#">Galeri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="#">Profil HIMATIF</a></li>
+          <li><a href="#">Struktur Organisasi</a></li>
+          <li><a href="#">Program Kerja</a></li>
+          <li><a href="#">Dokumentasi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> +1 234-456-0987</li>
+          <li><i class="fas fa-envelope"></i> info.xyz@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
 
   <script>
     const toggleBtn = document.querySelector('.toggle_btn');
