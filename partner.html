@@ -2,70 +2,246 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Partner & Sponsor – HIMATIFSAIZU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner - HIMATIFSAIZU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;600;700&family=Syne:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- NAVBAR -->
   <header>
-    <!-- (sama dengan index.html, copy saja navbar-nya) -->
-  </header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo HIMATIFSAIZU" />
+          <h1>HIMATIF<span>SAIZU</span></h1>
+        </a>
+      </div>
 
-  <!-- Hero Section -->
-  <section class="hero-sponsor">
-    <div class="container">
-      <h1>Jadilah Partner Kami</h1>
-      <p>Bersama HIMATIFSAIZU, mari tumbuh dan berkontribusi membangun generasi teknologi Islami yang unggul.</p>
-      <a href="#form-sponsor" class="action_btn">Ajukan Kerja Sama</a>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="partner.html" class="active">Partner</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <label for="themeToggle" class="slider-icon">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+
+      <a href="daftar.html" class="action_btn">Gabung</a>
+
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
-  </section>
-
-  <!-- Mengapa Menjadi Sponsor -->
-  <section class="benefit-sponsor">
-    <div class="container">
-      <h2>Mengapa Menjadi Sponsor HIMATIFSAIZU?</h2>
+    <div class="dropdown_menu">
       <ul>
-        <li><i class="fas fa-bullhorn"></i> Promosi brand Anda ke ratusan mahasiswa aktif.</li>
-        <li><i class="fas fa-network-wired"></i> Akses ke komunitas teknologi dan inovasi.</li>
-        <li><i class="fas fa-handshake"></i> Kolaborasi dengan organisasi progresif & aktif.</li>
+        <li><a href="index.html"><i class="fas fa-house"></i> Beranda</a></li>
+        <li><a href="berita.html"><i class="fas fa-users"></i> Berita</a></li>
+        <li><a href="tentangkami.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
+        <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Kegiatan</a></li>
+        <li><a href="partner.html" class="active"><i class="fas fa-handshake"></i> Call Sponsor</a></li>
+        <li><a href="galeri.html"><i class="fas fa-image"></i> Galeri</a></li>
+        <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+        <li><a href="daftar.html" class="action_btn"><i class="fas fa-user-plus"></i> Gabung</a></li>
       </ul>
     </div>
-  </section>
+  </header>
 
-  <!-- Daftar Partner -->
-  <section class="daftar-partner">
-    <div class="container">
-      <h2>Partner & Sponsor Kami</h2>
-      <div class="logo-grid">
-        <img src="assets/logo1.png" alt="Logo Sponsor 1" />
-        <img src="assets/logo2.png" alt="Logo Sponsor 2" />
-        <img src="assets/logo3.png" alt="Logo Sponsor 3" />
-        <!-- Tambah sesuai kebutuhan -->
+  <!-- HERO SECTION -->
+  <section class="hero-carousel swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture>
+          <img src="assets/hero-partner.jpg" alt="Partner Hero" loading="lazy" />
+        </picture>
+        <div class="slide-overlay"></div>
+        <div class="carousel-content">
+          <h2>Informatika Innovation Festival <span>2025</span></h2>
+          <p>Jalin kolaborasi dan dukung kesuksesan Invest 2025 sebagai bagian dari HIMATIFSAIZU</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Call To Action / Form -->
-  <section id="form-sponsor" class="form-sponsor">
+  <!-- HIGHLIGHT VIDEO -->
+  <section class="tentang-kami-duo">
     <div class="container">
-      <h2>Ingin Menjadi Sponsor?</h2>
-      <p>Kirimkan data Anda dan tim kami akan segera menghubungi.</p>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="nama" placeholder="Nama Perusahaan" required />
-        <input type="email" name="email" placeholder="Email Kontak" required />
-        <textarea name="pesan" placeholder="Pesan / Proposal Singkat" required></textarea>
-        <button type="submit" class="action_btn">Kirim</button>
-      </form>
+      <div class="video-wrapper custom-video">
+        <video id="partnerVideo" src="assets/video_partner.mp4" playsinline controls style="display: none;"></video>
+        <div class="custom-play-button" id="playPartnerBtn">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <h3>Invest 2025: <strong>Experience Beyond Sponsorship</strong></h3>
+        <p>Invest 2025 bukan hanya event—ini adalah platform kolaboratif yang membuka peluang bagi brand Anda untuk hadir lebih dekat dengan generasi muda digital. Dengan semangat inovasi dan kreativitas, kami mengundang Anda menjadi bagian dari sesuatu yang berdampak.</p>
+        <a href="#paket-sponsor" class="action_btn selengkapnya">Lihat Paket Sponsor</a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 HIMATIFSAIZU - Informatika UIN Saizu</p>
-  </footer>
+ <!-- PAKET SPONSOR INTERAKTIF -->
+<section class="section-sponsorship">
+  <h2><span style="color: #fff;">Our <em>Sponsorship</em> Packages</span></h2>
+  <div class="sponsor-container">
 
+    <div class="sponsor-card" data-label="Platinum" style="--label-color: #dedede;">
+      <div class="sponsor-content">
+        <h4>Platinum Sponsorship Package</h4>
+        <div class="price">$4000</div>
+        <div class="limit">02 Limit Available</div>
+        <p>Experience the epitome of exclusivity and brand visibility with the platinum sponsorship package at absolute mma...</p>
+        <ul>
+          <li>✔ VIP table for 10</li>
+          <li>✔ No line-ups</li>
+          <li>✔ Table drink service</li>
+          <li>✔ 1 night guest room</li>
+          <li>✔ 20 premium drink tickets</li>
+          <li>✔ 3-course plated meal</li>
+          <li>✔ Full page ad in event program</li>
+          <li>✔ Logo on ring card & cage post</li>
+          <li>✔ Logo on big screen & social media</li>
+          <li>✔ Showcase in event program</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sponsor-card" data-label="Gold" style="--label-color: #ffc107;">
+      <div class="sponsor-content">
+        <h4>Gold Sponsorship Package</h4>
+        <div class="price">$2500</div>
+        <div class="limit">05 Limit Available</div>
+        <p>Exclusive branding opportunities with excellent visibility and guest access.</p>
+        <ul>
+          <li>✔ Booth Premium di lokasi utama</li>
+          <li>✔ Logo di semua media partner</li>
+          <li>✔ Social media blast 3x</li>
+          <li>✔ Akses 2 Tiket VIP</li>
+          <li>✔ Sertifikat sponsor + press release</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sponsor-card" data-label="Silver" style="--label-color: #b0b0b0;">
+      <div class="sponsor-content">
+        <h4>Silver Sponsorship Package</h4>
+        <div class="price">$1500</div>
+        <div class="limit">10 Limit Available</div>
+        <p>Great exposure and partner benefits for your brand.</p>
+        <ul>
+          <li>✔ Booth Reguler</li>
+          <li>✔ Logo di media sosial</li>
+          <li>✔ Social media blast 2x</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sponsor-card active" data-label="Bronze" style="--label-color: #f4a261;">
+      <div class="sponsor-content">
+        <h4>Bronze Sponsorship Package</h4>
+        <div class="price">$1000</div>
+        <div class="limit">15 Limit Available</div>
+        <p>Simple and effective exposure for growing brands.</p>
+        <ul>
+          <li>✔ Nama brand dicantumkan di katalog</li>
+          <li>✔ Dapat e-sertifikat sponsor</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- BENEFIT SECTION -->
+  <section class="testimoni">
+    <blockquote>"Menjadi sponsor dalam Invest 2025 adalah bentuk nyata dukungan terhadap generasi muda yang kreatif, Islami, dan melek teknologi."</blockquote>
+    <cite>— Ketua Pelaksana Invest 2025</cite>
+  </section>
+
+  <!-- CTA JOIN -->
+  <section class="cta-join">
+    <h3>Ayo Bergabung Menjadi Partner!</h3>
+    <p>Dapatkan exposure luas dan dukung pengembangan mahasiswa informatika di Indonesia.</p>
+    <a href="kontak.html" class="action_btn">Hubungi Kami</a>
+  </section>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    const toggleThemeSwitch = document.getElementById('themeToggle');
+    const themeLabel = document.querySelector('label[for="themeToggle"]');
+   const cards = document.querySelectorAll(".sponsor-card");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        cards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+      });
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleThemeSwitch.checked = true;
+      themeLabel.setAttribute('aria-checked', 'true');
+    }
+
+    toggleThemeSwitch.addEventListener('change', () => {
+      const isDark = toggleThemeSwitch.checked;
+      document.body.classList.toggle('dark-mode', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeLabel.setAttribute('aria-checked', isDark.toString());
+    });
+
+    document.getElementById('playPartnerBtn')?.addEventListener('click', () => {
+      const video = document.getElementById('partnerVideo');
+      const btn = document.getElementById('playPartnerBtn');
+      video.style.display = 'block';
+      video.play();
+      btn.style.display = 'none';
+    });
+
+    function setActive(el) {
+      document.querySelectorAll('.sponsor-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      el.classList.add('active');
+    }
+
+    // Auto activate on hover (for desktop)
+    const supportsHover = window.matchMedia('(hover: hover)').matches;
+    if (supportsHover) {
+      document.querySelectorAll('.sponsor-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          document.querySelectorAll('.sponsor-card').forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
