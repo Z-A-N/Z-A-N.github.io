@@ -234,6 +234,62 @@
 <script>
   const scrollRight = document.querySelector('.scroll-right');
   const scrollLeft = document.querySelector('.scroll-left');
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const dropdownMenu = document.querySelector('.dropdown_menu');
+  const toggleThemeSwitch = document.getElementById('themeToggle');
+  const themeLabel = document.querySelector('label[for="themeToggle"]');
+
+  // Toggle dropdown
+  toggleBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Tutup dropdown jika ukuran layar > 768px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+
+  // Load tema dari localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleThemeSwitch.checked = true;
+    themeLabel.setAttribute('aria-checked', 'true');
+  }
+
+  // Toggle dark mode + simpan preferensi
+  toggleThemeSwitch.addEventListener('change', () => {
+    const isDark = toggleThemeSwitch.checked;
+    document.body.classList.toggle('dark-mode', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    themeLabel.setAttribute('aria-checked', isDark.toString());
+  });
+
+  // Custom Video Player
+  document.getElementById('playBtn').addEventListener('click', () => {
+    const video = document.getElementById('videoProfile');
+    const btn = document.getElementById('playBtn');
+
+    video.style.display = 'block';
+    video.volume = 1.0;
+    video.play();
+    btn.style.display = 'none';
+  });
+
+  // Inisialisasi Swiper
+  const heroSwiper = new Swiper('.hero-carousel', {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+  });
+
 
   function autoScroll(element, speed = 1, direction = 'right') {
     let scrollAmount = 0;
