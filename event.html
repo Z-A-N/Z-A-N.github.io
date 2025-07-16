@@ -135,31 +135,31 @@
       </div>
       <!-- 2 -->
       <div class="speaker-card">
-        <img src="assets/speaker2.jpg" alt="Elen Park">
+        <img src="assets/speaker1.jpg" alt="Elen Park">
         <h4>Elen Park</h4>
         <p>CTO, DeepMind</p>
       </div>
       <!-- 3 -->
       <div class="speaker-card">
-        <img src="assets/speaker3.jpg" alt="Dr. Alan Foster">
+        <img src="assets/speaker1.jpg" alt="Dr. Alan Foster">
         <h4>Dr. Alan Foster</h4>
         <p>Stanford AI Lab</p>
       </div>
       <!-- 4 -->
       <div class="speaker-card">
-        <img src="assets/speaker4.jpg" alt="Laura Kim">
+        <img src="assets/speaker1.jpg" alt="Laura Kim">
         <h4>Laura Kim</h4>
         <p>AI Policy Advisor, EU Commission</p>
       </div>
       <!-- 5 -->
       <div class="speaker-card">
-        <img src="assets/speaker5.jpg" alt="Jonathan R">
+        <img src="assets/speaker1.jpg" alt="Jonathan R">
         <h4>Jonathan R</h4>
         <p>Startup Founder</p>
       </div>
       <!-- 6 -->
       <div class="speaker-card">
-        <img src="assets/speaker6.jpg" alt="Jane Doe">
+        <img src="assets/speaker1.jpg" alt="Jane Doe">
         <h4>Jane Doe</h4>
         <p>Community Builder</p>
       </div>
@@ -399,35 +399,67 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    const toggleThemeSwitch = document.getElementById('themeToggle');
+    const themeLabel = document.querySelector('label[for="themeToggle"]');
 
-const targetDate = new Date("September 1, 2025 00:00:00").getTime();
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minutesEl = document.getElementById("minutes");
+    // Toggle dropdown
+    toggleBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+    });
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const timeLeft = targetDate - now;
-
-      if (timeLeft <= 0) {
-        daysEl.textContent = "00";
-        hoursEl.textContent = "00";
-        minutesEl.textContent = "00";
-        return;
+    // Tutup dropdown jika ukuran layar > 768px
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        dropdownMenu.classList.remove('show');
       }
+    });
 
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-
-      daysEl.textContent = String(days).padStart(2, '0');
-      hoursEl.textContent = String(hours).padStart(2, '0');
-      minutesEl.textContent = String(minutes).padStart(2, '0');
+    // Load tema dari localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleThemeSwitch.checked = true;
+      themeLabel.setAttribute('aria-checked', 'true');
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 60000);
-    </script>
-</body>
-</html>
+    // Toggle dark mode + simpan preferensi
+    toggleThemeSwitch.addEventListener('change', () => {
+      const isDark = toggleThemeSwitch.checked;
+      document.body.classList.toggle('dark-mode', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeLabel.setAttribute('aria-checked', isDark.toString());
+    });
+
+      AOS.init({ duration: 800, once: true });
+
+  const targetDate = new Date("September 1, 2025 00:00:00").getTime();
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft <= 0) {
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+      </script>
+  </body>
+  </html>
