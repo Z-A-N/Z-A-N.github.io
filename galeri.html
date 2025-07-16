@@ -9,6 +9,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
  <!-- NAVBAR -->
@@ -61,25 +62,52 @@
     </div>
   </header>
  <!-- SECTION GALERI 1 -->
- <section class="gallery-intro">
-  <div class="gallery-intro-container">
-    <div class="gallery-text">
-      <h2>A Photo <br>Galery of <br>The Nature</h2>
-      <p>The Nature is Beautiful<br>find your favorite picture around the world.</p>
+<section id="section1" class="max-w-7xl mx-auto px-6 py-16 sm:py-24">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <!-- Left Text Container -->
+      <div class="lg:w-1/3 flex flex-col justify-center">
+        <h1 class="text-5xl font-extrabold leading-tight tracking-tight mb-6 font-[Poppins],sans-serif">
+          A Photo<br />
+          Galery of<br />
+          The Nature
+        </h1>
+        <p class="text-gray-500 text-lg max-w-md">
+          The Nature is Beautiful<br />
+          find your favorite picture around the world.
+        </p>
+      </div>
+
+      <!-- Right Gallery Grid -->
+      <div class="lg:w-2/3">
+        <div class="gallery-grid">
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/1.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" data-row="2" style="grid-column: span 1;">
+            <img src="assets/gallery/2.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/3.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/4.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/5.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/6.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/7.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-item" style="grid-column: span 1;">
+            <img src="assets/gallery/8.JPG" alt="" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-images">
-      <img src="assets/gallery/1.jpg" alt="">
-      <img src="assets/gallery/2.jpg" alt="">
-      <img src="assets/gallery/3.jpg" alt="">
-      <img src="assets/gallery/4.jpg" alt="">
-      <img src="assets/gallery/5.jpg" alt="">
-      <img src="assets/gallery/6.jpg" alt="">
-      <img src="assets/gallery/7.jpg" alt="">
-      <img src="assets/gallery/8.jpg" alt="">
-      <img src="assets/gallery/9.jpg" alt="">
-    </div>
-  </div>
-</section>
+  </section>    
 
 
   <!-- SECTION GALERI 2 -->
