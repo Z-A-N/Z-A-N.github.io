@@ -299,6 +299,7 @@ body.dark-mode .text-wrapper p { color: #e2e8f0; }
   padding: 60px 30px;
   background-color: #18587A;
   text-align: center;
+  margin-bottom: 75px; 
 }
 
 .berita-terbaru h3 {
@@ -391,6 +392,7 @@ body.dark-mode .berita-terbaru {
   padding: 50px 30px;
   text-align: center;
   font-style: italic;
+  margin-bottom: 200px;
 }
 .testimoni blockquote {
   font-size: 18px;
@@ -518,3 +520,183 @@ body.dark-mode .cta-join {
   }
 }
 
+/* ======================== */
+/* FOOTER (Gaya Final V3)   */
+/* ======================== */
+footer {
+  position: relative;
+  margin-top: 100px;
+}
+
+/* Blok Call-to-Action (Biru Terang) */
+.footer-cta {
+  background-color: #4a7c9b;
+  color: #ffffff;
+  text-align: center;
+  width: 90%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  padding: 100px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: absolute; 
+  top: 50px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2; 
+}
+
+.footer-cta h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.action_btn.cta-btn {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 35px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.action_btn.cta-btn:hover {
+  background-color: #ffffff;
+  color: #265982;
+  transform: translateY(-2px);
+}
+
+/* Footer Main */
+/* Footer Main */
+.footer-main {
+  background-color: #265982;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 260px 20px 40px;
+  position: relative;
+  z-index: 1; 
+  clip-path: polygon(0 100px, 50% 0px, 100% 100px, 100% 100%, 0% 100%);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Mengatur tinggi background setengah dari .footer-main */
+  background-color: #265982; /* Sama dengan warna background footer */
+  z-index: -1; /* Menempatkannya di belakang konten footer */
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Column Styles */
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col.about .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-col.about .footer-logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col.about p {
+  line-height: 1.7;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #4a7c9b;
+  transform: translateY(-3px);
+}
+
+/* Links and Contact Styles */
+.footer-col.links ul,
+.footer-col.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col.links ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-col.links ul li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.footer-col.contact ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-col.contact ul li i {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
