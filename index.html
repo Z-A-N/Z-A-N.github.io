@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HIMATIFSAIZU - HMPS Informatika UIN Saizu</title>
+  <title>HMPSIFSAIZU - HMPS Informatika UIN Saizu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;600;700&family=Syne:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -13,54 +13,58 @@
 <body>
 
   <header>
-     <div class="navbar">
-       <div class="logo">
-         <a href="index.html">
-           <img src="assets/logo.png" alt="Logo HIMATIFSAIZU" />
-           <h1>HIMATIF<span>SAIZU</span></h1>
-         </a>
-       </div>
-
-       <nav class="nav-container">
-         <ul class="nav-links">
-           <li><a href="index.html" class="active">Beranda</a></li>
-           <li><a href="berita.html">Berita</a></li>
-           <li><a href="tentangkami.html">Tentang Kami</a></li>
-           <li><a href="event.html">Event</a></li>
-           <li><a href="partner.html">Partner</a></li>
-           <li><a href="galeri.html">Galeri</a></li>
-           <li><a href="kontak.html">Kontak</a></li>
-         </ul>
-       </nav>
-
-       <div class="theme-switch">
-         <input type="checkbox" id="themeToggle" />
-         <label for="themeToggle" class="slider-icon">
-           <i class="fas fa-sun"></i>
-           <i class="fas fa-moon"></i>
-         </label>
-       </div>
-
-       <a href="daftar.html" class="action_btn">Gabung</a>
-
-       <div class="toggle_btn">
-         <i class="fa-solid fa-bars"></i>
-       </div>
-     </div>
-
+    <div class="navbar fixed-navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo HMPSAIZU" />
+          <h1>HMPS<span>SAIZU</span></h1>
+        </a>
+      </div>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="partner.html">Partner</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+        </ul>
+      </nav>
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <label for="themeToggle" class="slider-icon">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+      <button class="action_btn" id="gabungBtn" type="button">Gabung</button>
+      <div class="toggle_btn" id="burgerBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
     <div class="dropdown_menu">
       <ul>
         <li><a href="index.html" class="active"><i class="fas fa-house"></i> Beranda</a></li>
-        <li><a href="Berita.html"><i class="fas fa-users"></i> Berita</a></li>
         <li><a href="tentangkami.html"><i class="fas fa-users"></i> Tentang Kami</a></li>
+        <li><a href="berita.html"><i class="fas fa-newspaper"></i> Berita</a></li>
         <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Event</a></li>
         <li><a href="partner.html"><i class="fas fa-handshake"></i> Partner</a></li>
         <li><a href="galeri.html"><i class="fas fa-image"></i> Galeri</a></li>
-        <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
-        <li><a href="daftar.html" class="action_btn"><i class="fas fa-user-plus"></i> Gabung</a></li>
+        <li><a href="#" class="action_btn" id="gabungBtnMobile"><i class="fas fa-user-plus"></i> Gabung</a></li>
       </ul>
     </div>
-   </header>
+    <button id="scrollToTop" title="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <!-- Modal Gabung -->
+    <div id="gabungModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img src="assets/berita1.jpg" alt="Poster Gabung HMPS" style="width:100%;max-width:300px;margin-bottom:1rem;"/>
+        <h2>Gabung HMPS</h2>
+        <p>Isi formulir pendaftaran untuk bergabung dengan HMPS Informatika UIN Saizu!</p>
+        <a href="daftar.html" class="action_btn">Formulir Pendaftaran</a>
+      </div>
+    </div>
+  </header>
 
 <section class="hero-carousel swiper">
   <div class="swiper-wrapper">
@@ -85,7 +89,7 @@
       <div class="slide-overlay"></div>
 
       <div class="carousel-content">
-        <h2>SELAMAT DATANG DI <span>HIMATIFSAIZU</span></h2>
+        <h2>SELAMAT DATANG DI <span>HMPSSAIZU</span></h2>
         <p>
           Himpunan Mahasiswa program studi Informatika UIN Saizu yang
           <strong>unggul, progresif, dan kolaboratif</strong> dalam
@@ -101,7 +105,7 @@
 </section>
 <div class="footer-bar">
   <div class="marquee">
-    <span>⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡ HIMATIFSAIZU ⚡</span>
+    <span>⚡ Info Terbaru: Pendaftaran anggota baru HMPS Informatika UIN Saizu dibuka! | Workshop UI/UX 18 Mei 2025 | Tim HMPSINF Juara 1 Lomba IoT Nasional | Hackathon Banyumas 2025 segera hadir! ⚡</span>
   </div>
 </div>
 <section class="tentang-kami-duo">
@@ -116,9 +120,9 @@
     <div class="text-wrapper">
       <h3><strong>Tentang Himpunan Mahasiswa Informatika UIN Saizu</strong></h3>
       <p>
-        HIMATIFSAIZU adalah organisasi mahasiswa Prodi Informatika UIN Saizu yang menjadi wadah pengembangan potensi di bidang teknologi, kepemimpinan, dan sosial kemasyarakatan. <br />
+        HMPS adalah organisasi mahasiswa Prodi Informatika UIN Saizu yang menjadi wadah pengembangan potensi di bidang teknologi, kepemimpinan, dan sosial kemasyarakatan. <br />
         Kami percaya bahwa kolaborasi dan inovasi adalah kunci membentuk generasi yang adaptif dan berdampak. <br />
-        Melalui berbagai program kerja dan kegiatan, HIMATIFSAIZU mendorong mahasiswa untuk aktif, kreatif, dan berbagi ide. <br />
+        Melalui berbagai program kerja dan kegiatan, HMPS mendorong mahasiswa untuk aktif, kreatif, dan berbagi ide. <br />
         Kami berkomitmen menciptakan lingkungan yang suportif untuk belajar, berorganisasi, dan berkarya bersama.
       </p>
       <a href="tentangkami.html" class="action_btn selengkapnya">Selengkapnya</a>
@@ -186,7 +190,7 @@
       <img src="assets/berita2.jpg" alt="Workshop UI/UX" />
       <div class="berita-info">
         <small>18 Mei 2025 · Kegiatan</small>
-        <h4>Workshop UI/UX Design: HIMATIFSAIZU Ajak Mahasiswa Kuasai Desain Antarmuka</h4>
+        <h4>Workshop UI/UX Design: HMPSINF Ajak Mahasiswa Kuasai Desain Antarmuka</h4>
         <p>Pelatihan UI/UX interaktif digelar HIMATIFSAIZU untuk membekali mahasiswa dengan kemampuan desain produk digital modern.</p>
         <a href="berita.html">Baca Selengkapnya →</a>
       </div>
@@ -196,8 +200,8 @@
       <img src="assets/berita3.jpg" alt="Juara Lomba IoT" />
       <div class="berita-info">
         <small>4 Mei 2025 · Prestasi</small>
-        <h4>Tim HIMATIFSAIZU Juara 1 Lomba Internet of Things Nasional</h4>
-        <p>Tim HIMATIFSAIZU sukses menjuarai lomba IoT tingkat nasional setelah menyisihkan puluhan peserta dari kampus se-Indonesia.</p>
+        <h4>Tim HMPSINF Juara 1 Lomba Internet of Things Nasional</h4>
+        <p>Tim HMPSINF sukses menjuarai lomba IoT tingkat nasional setelah menyisihkan puluhan peserta dari kampus se-Indonesia.</p>
         <a href="berita.html">Baca Selengkapnya →</a>
       </div>
     </div>
@@ -206,13 +210,13 @@
 </section>
 
   <section class="testimoni">
-    <blockquote>"Bergabung dengan HIMATIFSAIZU membuka banyak peluang belajar dan tumbuh. Saya jadi lebih percaya diri, punya relasi, dan pengalaman organisasi."</blockquote>
+    <blockquote>"Bergabung dengan HMPS membuka banyak peluang belajar dan tumbuh. Saya jadi lebih percaya diri, punya relasi, dan pengalaman organisasi."</blockquote>
     <cite>— Mahasiswa Informatika Angkatan 2023</cite>
   </section>
 
 <footer>
   <div class="footer-cta">
-    <h3>Ayo bergabung dengan HIMATIFSAIZU</h3>
+    <h3>Ayo bergabung dengan HMPS</h3>
     <p>Raih pengalaman berharga dan jadilah bagian dari perubahan.</p>
     <a href="daftar.html" class="action_btn cta-btn">Gabung</a>
   </div>
@@ -222,8 +226,8 @@
     <div class="footer-container">
       <div class="footer-col about">
         <div class="footer-logo">
-          <img src="assets/logo.png" alt="Logo HIMATIFSAIZU" />
-          <h4>HIMATIFSAIZU</h4>
+          <img src="assets/logo.png" alt="Logo HMPSAIZU" />
+          <h4>HMPS</h4>
         </div>
         <p>
           Wadah pengembangan potensi mahasiswa dalam bidang teknologi,
@@ -244,7 +248,7 @@
           <li><a href="tentangkami.html">Tentang Kami</a></li>
           <li><a href="kegiatan.html">Kegiatan</a></li>
           <li><a href="berita.html">Berita</a></li>
-          <li><a href="Partner.html">Partner</a></li>
+          <li><a href="partner.html">Partner</a></li>
           <li><a href="galeri.html">Galeri</a></li>
         </ul>
       </div>
@@ -276,7 +280,7 @@
 
     <div class="footer-bottom">
       <p>
-        &copy; 2025 HIMATIFSAIZU — Himpunan Mahasiswa Informatika UIN Saizu. All
+        &copy; 2025 HMPS — Himpunan Mahasiswa Informatika UIN Saizu. All
         Rights Reserved.
       </p>
     </div>
@@ -285,21 +289,43 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  const toggleBtn = document.querySelector('.toggle_btn');
+  // Navbar & Burger
+  const toggleBtn = document.getElementById('burgerBtn');
   const dropdownMenu = document.querySelector('.dropdown_menu');
   const toggleThemeSwitch = document.getElementById('themeToggle');
   const themeLabel = document.querySelector('label[for="themeToggle"]');
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  const gabungBtn = document.getElementById('gabungBtn');
+  const gabungBtnMobile = document.getElementById('gabungBtnMobile');
+  const gabungModal = document.getElementById('gabungModal');
+  const closeModal = document.querySelector('.close-modal');
 
-  // Toggle dropdown
+  // Toggle dropdown & burger icon
   toggleBtn.addEventListener('click', () => {
     dropdownMenu.classList.toggle('show');
+    toggleBtn.classList.toggle('active');
+    const icon = toggleBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
   });
 
   // Tutup dropdown jika ukuran layar > 768px
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
       dropdownMenu.classList.remove('show');
+      toggleBtn.classList.remove('active');
+      const icon = toggleBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
     }
+  });
+
+  // Scroll to top
+  window.addEventListener('scroll', () => {
+    scrollToTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  });
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // Load tema dari localStorage
@@ -321,12 +347,25 @@
   document.getElementById('playBtn').addEventListener('click', () => {
     const video = document.getElementById('videoProfile');
     const btn = document.getElementById('playBtn');
-
     video.style.display = 'block';
     video.volume = 1.0;
     video.play();
     btn.style.display = 'none';
   });
+
+  // Modal Gabung
+  function openGabungModal() {
+    gabungModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeGabungModal() {
+    gabungModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  gabungBtn.addEventListener('click', openGabungModal);
+  if (gabungBtnMobile) gabungBtnMobile.addEventListener('click', (e) => { e.preventDefault(); openGabungModal(); });
+  closeModal.addEventListener('click', closeGabungModal);
+  window.addEventListener('click', (e) => { if (e.target === gabungModal) closeGabungModal(); });
 
   // Inisialisasi Swiper
   const heroSwiper = new Swiper('.hero-carousel', {
@@ -340,7 +379,6 @@
         clickable: true,
     },
   });
-
   const kegiatanSwiper = new Swiper('.kegiatanSwiper', {
     slidesPerView: 1,
     spaceBetween: 20,
