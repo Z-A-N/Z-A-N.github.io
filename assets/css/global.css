@@ -115,7 +115,7 @@ header {
   -webkit-backdrop-filter: blur(2px);
 }
 .navbar {
-  background-color: transparent !important;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
