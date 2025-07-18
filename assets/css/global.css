@@ -1,3 +1,193 @@
+
+/* === Tambahan custom revisi navbar, modal, dark mode, dsb === */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.3s;
+  backdrop-filter: blur(8px);
+}
+body.dark-mode .fixed-navbar {
+  background: rgba(0,0,0,0.95);
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #007bff;
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Burger menu silang */
+.toggle_btn.active i.fa-xmark {
+  display: inline;
+}
+.toggle_btn i.fa-xmark {
+  display: none;
+}
+.toggle_btn.active i.fa-bars {
+  display: none;
+}
+
+/* Dropdown menu mobile revisi */
+.dropdown_menu {
+  width: 100vw;
+  left: 0 !important;
+  right: unset !important;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+body.dark-mode .dropdown_menu {
+  background: rgba(0,0,0,0.97);
+}
+.dropdown_menu.show {
+  display: block !important;
+}
+.dropdown_menu ul li a.active,
+.dropdown_menu ul li a:hover {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Tombol scroll to top */
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1200;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+#scrollToTop:hover {
+  background: #0056b3;
+}
+
+/* Modal Gabung */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  margin: 10vh auto;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.3s;
+}
+body.dark-mode .modal-content {
+  background: #181818;
+  color: #fff;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+}
+.close-modal:hover {
+  color: #007bff;
+}
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Marquee running text */
+.footer-bar {
+  background: #007bff;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+.marquee {
+  width: 100vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100vw;
+  animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Dark mode global revisi */
+body.dark-mode {
+  background: #111;
+  color: #fff;
+}
+body.dark-mode .action_btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+body.dark-mode .card {
+  background: #181818;
+  color: #fff;
+}
+
+/* Animasi fade-in untuk beranda */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsif grid galeri dan card */
+@media (max-width: 768px) {
+  .berita-container, .kegiatanSwiper .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .galeri-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* Reset dasar */
 * {
   margin: 0;
