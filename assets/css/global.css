@@ -115,12 +115,13 @@ header {
   -webkit-backdrop-filter: blur(2px);
 }
 .navbar {
+  background-color: transparent !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 10px 30px;
-  position: relative;
+  position: absolute;
 }
 
 /* Logo */
